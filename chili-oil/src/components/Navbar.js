@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import Link from 'next/link';
 import { Menu, X, ShoppingCart } from 'lucide-react';
+import SlideCart from './SlideCart';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,17 +45,7 @@ export default function Navbar() {
           {/* Right side buttons */}
           <div className="flex items-center">
             {/* Cart */}
-            <Link 
-              href="/cart"
-              className="p-2 text-gray-700 hover:text-red-600 relative"
-            >
-              <ShoppingCart className="h-6 w-6" />
-              {cartCount > 0 && (
-                <span className="absolute top-0 right-0 -mt-1 -mr-1 bg-red-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                  {cartCount}
-                </span>
-              )}
-            </Link>
+            <SlideCart />
 
             {/* Mobile menu button */}
             <div className="sm:hidden ml-2">
