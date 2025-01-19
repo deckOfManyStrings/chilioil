@@ -3,7 +3,7 @@ import "./globals.css";
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
-import { CartProvider } from "../context/CartContext";
+import { CartProvider } from "./context/CartContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
