@@ -1,12 +1,13 @@
-"use client"
+'use client'
 
 import { useState } from 'react';
+import { useCart } from '../context/CartContext';
 import Link from 'next/link';
 import { Menu, X, ShoppingCart } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [cartCount, setCartCount] = useState(0); // This will be managed by your cart state later
+  const { cartCount } = useCart();
 
   const navigation = [
     { name: 'Home', href: '/' },

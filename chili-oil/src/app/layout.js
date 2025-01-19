@@ -1,8 +1,10 @@
 // app/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from 'react-hot-toast';
 import Navbar from '../components/Navbar';
 import Footer from "../components/Footer";
+import { CartProvider } from "../context/CartContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +25,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className={`${geistSans.className} min-h-screen flex flex-col`}>
-        <Navbar />
-        <main className="flex-grow pt-16">
-          {children}
-        </main>
-        <Footer />
+        <CartProvider>
+          <Navbar />
+          <main className="flex-grow pt-16">
+            {children}
+          </main>
+          <Footer />
+          <Toaster position="bottom-right" />
+        </CartProvider>
       </body>
     </html>
   );
