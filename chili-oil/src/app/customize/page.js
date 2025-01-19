@@ -1,4 +1,4 @@
-import ChiliOilCustomizer from '../../components/ChiliOilCustomerizer';
+import ChiliOilCustomizer from '../components/ChiliOilCustomerizer';
 
 export default function CustomizePage() {
   return <ChiliOilCustomizer />;

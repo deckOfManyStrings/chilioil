@@ -9,7 +9,7 @@ import { ingredients, baseBlend } from '../data/ingredients';
 import SizeSelector from './SizeSelector';
 import IngredientCard from './IngredientCard';
 import HeatLevel from './HeatLevel';
-import { jarSizes } from '@/data/jarSizes';
+import { jarSizes } from '@/app/data/jarSizes';
 
 export default function ChiliSpiceCustomizer() {
   const { addItem } = useCart();
